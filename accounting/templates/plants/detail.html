@@ -1,4 +1,9 @@
-<h1>{{ plant.name }}</h1>
-<b>{{plant.description}}</b>
-<br />
-<a href="{% url 'index'%}">К списку</a>
+{% extends "base_generic.html" %}
+{% block content %}
+    <h1>{{ plant.name }}</h1>
+    <p>{{plant.description}}</p>
+    <b>{{plant.buyer_price}} ₽</b>
+    <br />
+    <br />
+    <a href="{% url 'accounting:index'%}">К списку</a>
+{% endblock %}

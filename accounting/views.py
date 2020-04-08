@@ -9,6 +9,6 @@ def index(request):
     return render(request, 'plants/index.html', context)
 
 
-def detail(request, plant_id):
+def plant_detail(request, plant_id):
     plant = get_object_or_404(Plant, pk=plant_id)
     return render(request, 'plants/detail.html', {'plant': plant})
